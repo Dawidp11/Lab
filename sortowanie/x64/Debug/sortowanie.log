@@ -1,0 +1,4 @@
+﻿  sortowanie.cpp
+C:\Users\dawid\Desktop\zaliczenie lab\sortowanie\sortowanie\sortowanie.cpp(59,13): warning C4566: znak przedstawiony przez nazwę zawierającą znaki uniwersalne "\u014D" nie może być przedstawiony w bieżącej stronie kodowej (1250)
+C:\Users\dawid\Desktop\zaliczenie lab\sortowanie\sortowanie\sortowanie.cpp(71,15): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  sortowanie.vcxproj -> C:\Users\dawid\Desktop\zaliczenie lab\sortowanie\x64\Debug\sortowanie.exe
