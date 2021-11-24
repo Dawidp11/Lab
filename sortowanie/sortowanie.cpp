@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <Windows.h>
 #include <time.h>
 
@@ -48,9 +48,27 @@ void quicksort(int* tab, int lewy, int prawy)
     if (i < prawy) quicksort(tab, i, prawy);
 }
 
+void selectionSort(int arr[], int f)
+{
+    for (int i = 0; i < f - 1; i++)
+    {
+        int min = i;
 
+        for (int j = i + 1; j < f; j++)
+        {
+            if (arr[j] < arr[min])
+                min = j;
+        }
 
+        if (min != i)
+        {
 
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+    }
+}
 
 int main()
 {
@@ -73,7 +91,7 @@ int main()
     for (int i = 0; i < wiela; i++)
     {
 
-        bera[i] = rand() % 100 + 1;
+        bera[i] = rand() % wiela + 1;
 
     }
 
@@ -89,9 +107,11 @@ int main()
     {
         cout << cajtung[i] << " ";
     }
+    
     //algorytmy sortujące //
-    
-    
+
+
+    // bubble_sort //
     cout << "\n" << endl;
 
 
@@ -110,6 +130,7 @@ int main()
     cout << endl << "Czas sortowania  " << sec << " s" << endl;
     cout << "\n" << endl;
 
+    // quicksort //
 
     cout << " quicksort " << endl;
     start = clock();
@@ -123,6 +144,29 @@ int main()
         cout << bera[i] << " ";
     }
     cout << endl << "Czas sortowania  " << sec << " s" << endl;
+
+
+    cout << "\n" << endl;
+
+    // selectionSort //
+
+    cout << " selectionSort " << endl;
+    start = clock();
+    selectionSort(bera, wiela);
+    stop = clock();
+    sec = (double)(stop - start) / CLOCKS_PER_SEC;
+    cout << " \n" << endl;
+    cout << "po sortowane : \n" << endl;
+    for (int i = 0; i < wiela; i++)
+    {
+        cout << bera[i] << " ";
+
+    }
+    cout << endl << "Czas sortowania  " << sec << " s" << endl;
+    cout << "\n" << endl;
+    
+
+
 
     delete[] bera;
     delete[] cajtung;
