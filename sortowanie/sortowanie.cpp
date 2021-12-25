@@ -290,17 +290,8 @@ int main()
     cout << endl << "Czas sortowania  " << sec << " s" << endl;
     cout << "\n" << endl;
     
-
- 
-
- 
-    
-
-
-
     delete[] bera;
     delete[] cajtung;
-
 
     return 0;
 }
